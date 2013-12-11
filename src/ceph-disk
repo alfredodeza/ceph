@@ -489,7 +489,6 @@ def _check_output(*args, **kwargs):
         cmd = kwargs.get("args")
         if cmd is None:
             cmd = args[0]
-        #raise subprocess.CalledProcessError(ret, cmd, output=out)
         error = subprocess.CalledProcessError(ret, cmd)
         error.output = out
         raise error
